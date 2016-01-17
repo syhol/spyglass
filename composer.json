@@ -1,0 +1,16 @@
+{
+    "name": "syhol/spyglass",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Simon Holloway",
+            "email": "simon@syhol.io"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Syhol\\Spyglass\\": "src"
+        }
+    }
+}
