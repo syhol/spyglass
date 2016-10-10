@@ -17,6 +17,11 @@ class Model implements ArrayAccess, IteratorAggregate, Countable
     private $reader;
 
     /**
+     * @var Writer
+     */
+    private $writer;
+    
+    /**
      * @var array
      */
     private $data;
@@ -25,9 +30,10 @@ class Model implements ArrayAccess, IteratorAggregate, Countable
      * @param Reader $reader
      * @param array $data
      */
-    public function __construct(Reader $reader, array $data)
+    public function __construct(Reader $reader, Writer $writer, array $data)
     {
         $this->reader = $reader;
+        $this->writer = $writer;
         $this->data = $data;
     }
 
@@ -93,7 +99,7 @@ class Model implements ArrayAccess, IteratorAggregate, Countable
      */
     public function offsetSet($offset, $value)
     {
-        // TODO: Implement offsetSet() method.
+        $this->writer->set($offset, $this->data, $value);
     }
 
     /**
@@ -104,6 +110,6 @@ class Model implements ArrayAccess, IteratorAggregate, Countable
      */
     public function offsetUnset($offset)
     {
-        // TODO: Implement offsetUnset() method.
+        $this->writer->remove($offset, $this->data, $value);
     }
 }
