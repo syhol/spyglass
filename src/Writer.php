@@ -9,6 +9,40 @@ class Writer
     /**
      * @param string $path
      * @param array|ArrayAccess $data
+     * @param callable $mapper
+     * @return Value
+     */
+    public function map($path, $data, callable $mapper)
+    {
+
+    }
+    
+    /**
+     * @param string $path
+     * @param array|ArrayAccess $data
+     * @param callable $filter
+     * @return Value
+     */
+    public function filter($path, $data, callable $filter)
+    {
+
+    }
+    
+    /**
+     * @param string $path
+     * @param array|ArrayAccess $data
+     * @param callable $filter
+     * @param mixed $initial
+     * @return Value
+     */
+    public function fold($path, $data, callable $filter, $initial)
+    {
+
+    }
+    
+    /**
+     * @param string $path
+     * @param array|ArrayAccess $data
      * @param mixed $value
      * @return Value
      */
@@ -27,7 +61,7 @@ class Writer
     {
 
     }
-
+    
     /**
      * @param string $path
      * @param array|ArrayAccess $data
