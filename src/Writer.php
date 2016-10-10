@@ -16,6 +16,17 @@ class Writer
     {
 
     }
+    
+    /**
+     * @param string $path
+     * @param array|ArrayAccess $data
+     * @param mixed $value
+     * @return Value
+     */
+    public function setIfEmpty($path, $data, $value)
+    {
+
+    }
 
     /**
      * @param string $path
